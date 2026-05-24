@@ -100,9 +100,7 @@ export default function Gallery() {
 
           {!isExpanded && (
             <div className="flex items-center justify-center gap-2 mt-8 mb-8">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#c4c7c5] cursor-pointer"></span>
-              <span className="w-3 h-3 rounded-full bg-[#1a73e8] cursor-pointer"></span>
-              <span className="w-2.5 h-2.5 rounded-full bg-[#c4c7c5] cursor-pointer"></span>
+              
             </div>
           )}
 
