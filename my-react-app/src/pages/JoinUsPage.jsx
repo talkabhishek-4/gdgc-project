@@ -88,7 +88,7 @@ export default function JoinUsPage() {
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-[#3c4043] tracking-wide block">Your Name *</label>
               <input 
-                type="text" name="fullName" required value={studentData.fullName} onChange={handleInput} placeholder="Abhishek Jaiswal"
+                type="text" name="fullName" required value={studentData.fullName} onChange={handleInput} placeholder=""
                 className="w-full px-4 py-3 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium placeholder-gray-400"
               />
             </div>
@@ -98,14 +98,14 @@ export default function JoinUsPage() {
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-[#3c4043] tracking-wide block">Email Address *</label>
                 <input 
-                  type="email" name="emailAddress" required value={studentData.emailAddress} onChange={handleInput} placeholder="abhi.jais@gmail.com"
+                  type="email" name="emailAddress" required value={studentData.emailAddress} onChange={handleInput} placeholder="XYZ@gmail.com"
                   className="w-full px-4 py-3 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium placeholder-gray-400"
                 />
               </div>
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-[#3c4043] tracking-wide block">University Roll / ID *</label>
                 <input 
-                  type="text" name="collegeRoll" required value={studentData.collegeRoll} onChange={handleInput} placeholder="GGV/CSE/24/..."
+                  type="text" name="collegeRoll" required value={studentData.collegeRoll} onChange={handleInput} placeholder="GGV/Dept/XX/....."
                   className="w-full px-4 py-3 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-medium placeholder-gray-400"
                 />
               </div>
@@ -119,9 +119,13 @@ export default function JoinUsPage() {
                   name="academicSemester" value={studentData.academicSemester} onChange={handleInput}
                   className="w-full px-4 py-3 bg-gray-50/50 focus:bg-white rounded-xl border border-gray-200/80 focus:border-[#4285f4] focus:ring-4 focus:ring-blue-100/40 transition-all outline-none text-sm text-gray-800 font-semibold cursor-pointer"
                 >
+                  <option value="1st Semester">1st Semester (1st Year)</option>
                   <option value="2nd Semester">2nd Semester (1st Year)</option>
+                  <option value="3rd Semester">3rd Semester (2nd Year)</option>
                   <option value="4th Semester">4th Semester (2nd Year)</option>
+                  <option value="5th Semester">5th Semester (3rd Year)</option>
                   <option value="6th Semester">6th Semester (3rd Year)</option>
+                  <option value="7th Semester">7th Semester (4th Year)</option>
                   <option value="8th Semester">8th Semester (4th Year)</option>
                 </select>
               </div>
@@ -133,7 +137,12 @@ export default function JoinUsPage() {
                 >
                   <option value="Web Development">Web Development (React/Vite)</option>
                   <option value="Cloud Computing">Cloud Computing (Infra Track)</option>
+                  <option value="Game Development">Game Development (Unity/Unreal)</option>
+                  <option value="Graphics & Animation">Graphics & Animation (Blender/Unreal)</option>
+                  <option value="Multi Media">Multi Media (Video Editing)</option>
                   <option value="AI & Machine Learning">AI & Machine Learning (Systems)</option>
+                  <option value="Cybersecurity">Cybersecurity (InfoSec Track)</option>
+                  <option value="Content Creation">Content Creation (Infra Track)</option>
                   <option value="UI/UX & Design Strategy">UI/UX & Design Strategy</option>
                 </select>
               </div>
