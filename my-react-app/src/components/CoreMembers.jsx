@@ -21,8 +21,8 @@ export default function CoreMembers() {
       border: "border-t-[#34a853]" 
     },
     { 
-      name: "Abhishek Jaiswal", 
-      role: "UI/UX Executive & Frontend Lead", 
+      name: "Core Member 3", 
+      role: "marketing & outreach lead", 
       dept: "Computer Science & Engineering", 
       linkedin: "https://linkedin.com",
       glowBg: "bg-red-400/10",
