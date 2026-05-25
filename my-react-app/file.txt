@@ -451,22 +451,6 @@ export default function PastEvents() {
   );
 }
 
- <option value="1st Semester">1st Semester (1st Year)</option>
-                  <option value="2nd Semester">2nd Semester (1st Year)</option>
-                  <option value="3rd Semester">3rd Semester (2nd Year)</option>
-                  <option value="4th Semester">4th Semester (2nd Year)</option>
-                  <option value="5th Semester">5th Semester (3rd Year)</option>
-                  <option value="6th Semester">6th Semester (3rd Year)</option>
-                  <option value="7th Semester">7th Semester (4th Year)</option>
-                  <option value="8th Semester">8th Semester (4th Year)</option>
+ 
 
-
-                   <option value="Web Development">Web Development (React/Vite)</option>
-                  <option value="Cloud Computing">Cloud Computing (Infra Track)</option>
-                  <option value="Game Development">Game Development (Unity/Unreal)</option>
-                  <option value="Graphics & Animation">Graphics & Animation (Blender/Unreal)</option>
-                  <option value="Multi Media">Multi Media (Video Editing)</option>
-                  <option value="AI & Machine Learning">AI & Machine Learning (Systems)</option>
-                  <option value="Cybersecurity">Cybersecurity (InfoSec Track)</option>
-                  <option value="Content Creation">Content Creation (Infra Track)</option>
-                  <option value="UI/UX & Design Strategy">UI/UX & Design Strategy</option>
+                  
