@@ -1,8 +1,10 @@
 import React from 'react';
 
+// --- IMPORT TRACK ILLUSTRATION IMAGES ---
 import cloudCampaignImg from '../assets/cloud1.png'; 
 import aithonImg from '../assets/aithon.png';
 
+// --- IMPORT ALL 8 PAST SEASONS EVENT GALLERY PHOTOS ---
 import gallery1 from '../assets/past_gallery1.jpg';
 import gallery2 from '../assets/past_gallery2.jpg';
 import gallery3 from '../assets/past_gallery3.jpg';
@@ -46,6 +48,7 @@ export default function PastEvents() {
   return (
     <div className="w-full space-y-16 pt-6 font-sans tracking-wide text-left">
       
+      {/* ================= SECTION 1: CAMPAIGNS & TRACKS SPLIT GRID ================= */}
       <div className="space-y-6">
         <h3 className="text-2xl font-bold text-[#202124]">
           Past Events
@@ -81,6 +84,7 @@ export default function PastEvents() {
         </div>
       </div>
 
+      {/* ================= SECTION 2: PAST SEASONS MEMORIES GALLERY (BUG FIXED) ================= */}
       <div className="space-y-6">
         <div className="space-y-2">
           <h3 className="text-2xl font-bold text-[#0f172a] tracking-tight">
@@ -95,19 +99,21 @@ export default function PastEvents() {
               key={index} 
               className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all duration-300"
             >
-              <div className="w-full h-48 bg-gray-50 overflow-hidden relative">
+              {/* Image Frame Wrapper: Fixed to h-52 with absolute child mapping for crisp edge-to-edge rendering */}
+              <div className="w-full h-52 bg-gray-50 overflow-hidden relative">
                 <img 
                   src={session.image} 
                   alt={`${session.type} visual window`} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter brightness-[0.98] contrast-[1.02]"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter brightness-[0.98] contrast-[1.02]"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.insertAdjacentHTML('afterend', '<div class="w-full h-full flex items-center justify-center bg-gray-50 text-xs text-gray-400 font-bold">Past Session Photo</div>');
+                    e.target.insertAdjacentHTML('afterend', '<div class="w-full h-full flex items-center justify-center bg-gray-100 text-xs text-gray-400 font-bold">Past Session Photo</div>');
                   }}
                 />
               </div>
 
-              <div className="p-4 bg-white flex items-center justify-start space-x-2 text-sm text-[#202124] font-semibold border-t border-gray-50">
+              {/* Bottom Card Label Stripe */}
+              <div className="p-4 bg-white flex items-center justify-start space-x-2 text-sm text-[#202124] font-semibold border-t border-gray-50 relative z-10">
                 <svg 
                   className="w-4 h-4 text-[#5f6368] flex-shrink-0" 
                   fill="none" 
