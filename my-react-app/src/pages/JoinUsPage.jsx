@@ -191,7 +191,7 @@ export default function JoinUsPage() {
             {/* APPLICATION ACTION BUTTON */}
           <button 
   type="submit" 
-  className="w-full relative overflow-hidden bg-[#12061d] hover:bg-gray-50/80 text-[#717e86] border border-gray-200 font-bold py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 active:scale-[0.98] cursor-pointer text-xs uppercase tracking-widest group"
+  className="w-full relative overflow-hidden bg-[#421c80] hover:bg-gray-50/80 text-[#8d99a1] border border-gray-200 font-bold py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 active:scale-[0.98] cursor-pointer text-xs uppercase tracking-widest group"
 >
   {/* Underline Quad-Color Gradient Track Accent */}
   <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-[#4285f4] via-[#ea4335] via-[#fbbc05] to-[#34a853] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
