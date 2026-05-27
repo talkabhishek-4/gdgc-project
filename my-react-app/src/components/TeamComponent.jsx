@@ -5,8 +5,8 @@ export default function TeamsComponent() {
 
   const departments = [
     {
-      title: "Technical Domain",
-      count: "8 Core Members",
+      title: "Team Web & Software Development",
+      count: "8  Members",
       desc: "Manages solution builds, codebase staging, and active deployment tracks during seasonal hackathons.",
       color: "text-[#4285f4]",
       bgColor: "bg-[#4285f4]/10",
@@ -25,8 +25,8 @@ export default function TeamsComponent() {
       ]
     },
     {
-      title: "Design & UX Strategy",
-      count: "8 Core Members",
+      title: "Team AI & Machine Learning",
+      count: "8 Members",
       desc: "Curates vector assets, visual brand ribbons, typography guides, and interactive layout systems.",
       color: "text-[#34a853]",
       bgColor: "bg-[#34a853]/10",
@@ -45,8 +45,8 @@ export default function TeamsComponent() {
       ]
     },
     {
-      title: "Editorial & Content",
-      count: "8 Core Members",
+      title: "Team Cloud & DevOps",
+      count: "8  Members",
       desc: "Handles session notes, professional report humanization, campaign announcements, and copy circles.",
       color: "text-[#fbbc05]",
       bgColor: "bg-[#fbbc05]/10",
@@ -64,9 +64,30 @@ export default function TeamsComponent() {
         { name: "Junior Content Rep 3", role: "Junior Member", dept: "ECE", linkedin: "https://linkedin.com", tier: "junior" }
       ]
     },
+    
     {
-      title: "Operations & PR",
-      count: "8 Core Members",
+      title: "Team Cybersecurity & Ethical Hacking",
+      count: "8 Members",
+      desc: "Coordinates physical venue schedules, administrative portal logging, and student outreach syncs.",
+      color: "text-[#ea4335]",
+      bgColor: "bg-[#ea4335]/10",
+      borderColor: "hover:border-[#ea4335]/40 hover:shadow-[0_8px_30px_rgb(234,67,53,0.08)]",
+      glowBg: "bg-[#fbbc05]/10",
+      activeShadow: "shadow-[0_12px_40px_rgba(251,188,5,0.12)] border-[#fbbc05]/30",
+      roster: [
+        { name: "Editorial Lead", role: "Domain Lead", dept: "CSE", linkedin: "https://linkedin.com", tier: "lead" },
+        { name: "Editorial Co-Lead", role: "Domain Co-Lead", dept: "ECE", linkedin: "https://linkedin.com", tier: "colead" },
+        { name: "Senior Writer 1", role: "Senior Member", dept: "IT", linkedin: "https://linkedin.com", tier: "senior" },
+        { name: "Senior Writer 2", role: "Senior Member", dept: "CSE", linkedin: "https://linkedin.com", tier: "senior" },
+        { name: "Senior Writer 3", role: "Senior Member", dept: "CSE", linkedin: "https://linkedin.com", tier: "senior" },
+        { name: "Junior Content Rep 1", role: "Junior Member", dept: "IT", linkedin: "https://linkedin.com", tier: "junior" },
+        { name: "Junior Content Rep 2", role: "Junior Member", dept: "CSE", linkedin: "https://linkedin.com", tier: "junior" },
+        { name: "Junior Content Rep 3", role: "Junior Member", dept: "ECE", linkedin: "https://linkedin.com", tier: "junior" }
+      ]
+    },
+    {
+      title: "Team UI/UX Design & Creative Strategy ",
+      count: "8  Members",
       desc: "Coordinates physical venue schedules, administrative portal logging, and student outreach syncs.",
       color: "text-[#ea4335]",
       bgColor: "bg-[#ea4335]/10",
@@ -112,8 +133,7 @@ export default function TeamsComponent() {
         </p>
         <div className="absolute bottom-0 left-0 h-0.5 w-20 bg-gradient-to-r from-[#34a853] to-[#fbbc05]"></div>
       </div>
-
-      {/* STACKED BLOCK VERTICAL COLUMN ENGINE */}
+ 
       <div className="flex flex-col space-y-6 w-full">
         {departments.map((dept, index) => {
           const isPanelOpen = expandedDeptIndex === index;
@@ -123,12 +143,11 @@ export default function TeamsComponent() {
               className={`bg-white rounded-[2.25rem] border border-gray-100 p-6 md:p-8 flex flex-col justify-between space-y-6 transition-all duration-500 ease-out relative overflow-hidden group ${
                 isPanelOpen ? dept.activeShadow : `shadow-sm ${dept.borderColor}`
               }`}
-            >
-              {/* Dynamic Aura Glow Orb Backdrop */}
+            > 
               <div className={`absolute -right-16 -top-16 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-700 scale-75 group-hover:scale-110 opacity-40 group-hover:opacity-100 ${dept.glowBg}`}></div>
               <div className={`absolute -left-16 -bottom-16 w-48 h-48 rounded-full blur-3xl pointer-events-none transition-all duration-700 scale-75 opacity-0 ${isPanelOpen ? 'opacity-30 scale-100' : ''} ${dept.glowBg}`}></div>
 
-              {/* Top Structural Info Layer */}
+           
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full relative z-10">
                 <div className="space-y-2.5 max-w-2xl">
                   <div className={`px-3 py-1 rounded-full ${dept.bgColor} ${dept.color} text-[10px] font-black uppercase tracking-widest inline-flex items-center gap-1.5 transform group-hover:translate-x-1 transition-transform duration-300`}>
@@ -138,8 +157,7 @@ export default function TeamsComponent() {
                   <h4 className="text-xl md:text-2xl font-black text-[#446e6c] tracking-tight transition-colors group-hover:text-gray-900">{dept.title}</h4>
                   <p className="text-xs md:text-sm text-[#5f6368] leading-relaxed font-normal">{dept.desc}</p>
                 </div>
-
-                {/* View Controller Action Button */}
+ 
                 <button
                   onClick={() => toggleRosterPanel(index)}
                   className={`px-6 py-3.5 rounded-xl border font-bold text-xs uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 select-none min-w-[180px] cursor-pointer shadow-2xs group/btn active:scale-98 ${
@@ -157,16 +175,14 @@ export default function TeamsComponent() {
                   </svg>
                 </button>
               </div>
-
-              {/* ================= EXPANDABLE DRAWER: ROSTER SUB-GRID SYSTEM ================= */}
+ 
               <div 
                 className={`transition-all duration-500 ease-in-out relative z-10 ${
                   isPanelOpen ? 'max-h-[1400px] opacity-100 invisible visible mt-2' : 'max-h-0 opacity-0 invisible overflow-hidden pointer-events-none'
                 }`}
               >
                 <div className="w-full h-px bg-gray-100/70 mb-6"></div>
-                
-                {/* 8-Member Structural Node Grid Layout */}
+                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full">
                   {dept.roster.map((member, mIdx) => (
                     <div 
@@ -176,8 +192,7 @@ export default function TeamsComponent() {
                       } hover:border-gray-200 hover:shadow-md hover:-translate-y-1`}
                       style={{ transitionDelay: `${mIdx * 40}ms` }}
                     >
-                      <div className="space-y-3 w-full">
-                        {/* Avatar Frame with Dynamic Inner Pulse Accent */}
+                      <div className="space-y-3 w-full"> 
                         <div className="w-10 h-10 rounded-full bg-gray-50/50 flex items-center justify-center text-sm border border-gray-100 mx-auto text-gray-400 font-bold select-none relative group-hover/member:scale-105 transition-transform duration-300">
                           👤
                           <div className={`absolute -inset-0.5 rounded-full border border-dashed opacity-0 group-hover/member:opacity-100 group-hover/member:animate-spin duration-1000 text-gray-300`}></div>
@@ -191,8 +206,7 @@ export default function TeamsComponent() {
                           </span>
                         </div>
                       </div>
-
-                      {/* Small Bottom Connect Layout Row */}
+ 
                       <div className="w-full flex items-center justify-between pt-2.5 border-t border-gray-100 mt-4">
                         <span className="bg-gray-50 text-gray-400 border border-gray-200/50 rounded-lg px-2 py-0.5 text-[9px] font-black uppercase tracking-wider truncate max-w-[110px]" title={member.dept}>
                           {member.dept}

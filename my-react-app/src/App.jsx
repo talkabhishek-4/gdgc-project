@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col justify-between">
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
-      <main className="flex-grow">{renderPage()}</main>
+      <main className="grow">{renderPage()}</main>
       <Footer />
     </div>
   );

@@ -15,8 +15,8 @@ export default function AboutHeader() {
             WHAT WE DO
           </span>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#202124] tracking-tight leading-tight">
-            About GDGC GGV
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-black text-[#081431] tracking-tight leading-tight">
+            Google Developer Groups on Campus - GGV Chapter
           </h2>
           
           <div className="w-20 h-1.5 bg-[#ea4335] rounded-full mb-6"></div>
